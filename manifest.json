@@ -1,0 +1,110 @@
+{
+  "start_url": "https://play.wftc.xyz/league/",
+  "dir": "ltr",
+  "lang": "en",
+  "display": "standalone",
+  "name": "League",
+  "short_name": "League",
+  "description": "Football league fixtures generator and timer.",
+  "orientation": "portrait-primary",
+  "theme_color_backup": "#4aace6",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "shortcuts": [
+    {
+        "name": "Cutting",
+        "short_name": "Shortcutting",
+        "description": "Testing a shortcut",
+        "url": "?test=success",
+        "icons": [{
+          "src": "icons/shortcut.png",
+          "sizes": "192x192"
+		}]
+    }
+  ],
+  "prefer_related_applications": false,
+  "categories": [
+    "sports"
+  ],
+  "screenshots": [
+    {
+      "src": "icons/ss1.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "icons/ss2.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "icons/ss3.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "icons/ss4.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "icons/ss5.png",
+      "sizes": "1170x2532",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "icons": [
+    {
+      "src": "icons/48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

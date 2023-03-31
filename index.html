@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="League">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>League Standings | Football</title>
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+		<link rel="manifest" href="manifest.json">
+		<link rel="shortcut icon" href="icons/favicon.ico">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/11pm-10sm-p.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="splash/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/iPhone_11__iPhone_XR_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/10.9__iPad_Air_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/8.3__iPad_Mini_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/10.2__iPad_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/10.2__iPad_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/10.5__iPad_Air_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/12.9__iPad_Pro_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/12.9__iPad_Pro_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/10.5__iPad_Air_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/iPhone_14_Pro_Max_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="splash/iPhone_14_Pro_Max_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/10.9__iPad_Air_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="splash/8.3__iPad_Mini_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="splash/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="splash/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash/iPhone_14_Pro_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="splash/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="splash/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="splash/iPhone_11__iPhone_XR_portrait.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="splash/iPhone_14_Pro_landscape.png">
+		<style>
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	color: white;
+	font-family: Fjalla One, sans-serif;
+}
+
+html {
+	background-color: black;
+}
+
+.main {
+	margin: 0 0 30px 0;
+}
+
+#teams, #standings {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: none;
+	color: #ffe221;
+	margin: 30px auto 0 auto;
+	display: block;
+}
+
+select, input, button, input[type="text"] {
+    border-width: 0;
+	background-color: black;
+	text-align: center;
+}
+
+table, #done, #play {
+	margin: 30px auto;
+	border-collapse: collapse;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+}
+
+#top {
+	border-bottom: 1px solid #ffe221;
+}
+
+th {
+	background-color: black;
+	color: #ffe221;
+}
+
+th, td {
+	padding: 10px;
+}
+
+tr {
+	text-align: center;
+}
+
+/* Others */
+#standings table tr td { color: #ff7b21 }
+#standings table tr:hover td {
+	background-color: #ff7b21;
+}
+
+/* Winner */
+#standings table tr:nth-child(2) td { color: #7f2 }
+#standings table tr:hover:nth-child(2) td {
+	background-color: #7f2 !important;
+}
+
+/* Runner-up */
+#standings table tr:nth-child(3) td { color: #59f }
+#standings table tr:hover:nth-child(3) td {
+	background-color: #59f !important;
+}
+
+/* Loser */
+#standings table tr:nth-last-child(1) td { color: #f44 }
+#standings table tr:hover:nth-last-child(1) td {
+	background-color: #f44 !important;
+}
+
+#standings table tr:hover td, #standings table tr:hover td span {
+	color: black !important;
+}
+
+#done, #play, #reset {
+	font-size: 1.6em;
+}
+
+#done, #play, #add {
+	color: #faa5d0;
+}
+
+#tpause, #tstop, #tplay {
+	border: none;
+	color: black;
+	background-color: #ffe221;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	font-size: 3em;
+	cursor: pointer;
+	text-align: center
+}
+
+#countdown {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	font-size: 5em;
+	margin: 0 auto;
+	padding: 10px auto 40px auto;
+	width: 196px;
+	height: 128px;
+	background-color: #ffe221;
+	border-radius: 50%;
+}
+
+#countdown-number {
+	font-family: monospace;
+	color: black;
+}
+
+.action-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	margin-top: 30px;
+}
+
+aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#reset {
+  text-align: center;
+  margin: 2em auto 1em auto;
+  cursor: pointer;
+}
+		</style>
+		<script>
+// Navigation
+(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener('click',function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;'href'in d&&(d.href.indexOf('http')||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,'standalone')
+
+// Hide URL bar
+window.addEventListener('load', () => {
+	setTimeout(() => {
+		window.scrollTo(0, 1)
+	}, 0)
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('worker.js')
+	}
+})
+		
+// Sound
+let radar = 'data:audio/mpeg;base64,SUQzBAAAAAAAPFRYWFgAAAAPAAADVFhYWABpc282bXA0MQBUU1NFAAAADwAAA0xhdmY1OS4zMC4xMDEAAAAAAAAAAAAAAP/7UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEluZm8AAAAPAAAAmAAAPtoABgkLDhATFRgaHR8iJCcpLC4xMzY4Oz1AREVJSk5PU1RYWV1eYmNnaGxtcXJ2d3t8gIOEiImNjpKTl5icnaGipqerrLCxtba6u7/CxMfJzM7R09bY293g4uXn6uzv8fT2+fv+AAAAAExhdmM1OS40MgAAAAAAAAAAAAAAACQDdQAAAAAAAD7aov3BWQAAAAAAAAAAAAAAAAAAAAD/+xBkAA/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAATX/8gAACGBAu9b/B/zATfw3wbfl4oeKDHK/FKC2h+X0MBTAC0IaLk/80LxOEgRf/9RuHxe2jmEclgHgoIhMFPAfTnCt//7EmQiD/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABEX7CePlWCAX3IZDVXL+r5JNfpf3KgmqmIYmc24AAD5mfSUgwEKZkOLOitfN6C1w9Hb/6m/icYAfMQBSDE/32Dugl0NwiP/7EGREj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABBwBFpYlb/UEQgzw///VjudqAc9FB3h4kwVRtQAAIfLLQgsEQ2DigPgsH5Y96MyncTAWhpyZrtX9zv4ALAAC1CATUe4I//sSZGaP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEyCZKTDQFXTcJ5/jYSlCUSiBK/85SBL1HAAibpgAGtCjAAA//ymAUOjeWEYnNNrd+1sXBFBFeBKO067e2nMPcXDkq/5Na//sQZIkP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEzCCDbYcQVZCNgmxMCgCst6BPUpPxzhVCxMTAKqg/2JMlyUW6ZKAtzW4L39umBQHdAAA/mSIKEgJMgdBRoTJ+OG505Vb/+xJkqw3wAAAAAAAACAAADSAAAAEBgEiiNAEAEAAANIKAAAT/PBNSw3LkxQ0wz847+VB3iIYwVBLBklpZ4qNgLBMkm4dOib9VaHPnfF4hoaPrN150036iCQd4iHMVQPwAAD2WHXxdBRb/+xBkx4ABLSVLhjZAAAAADSDAAAAE0HVyGFWAAAAANIMAAABj19U0Z46NcS3LeicLgUcJDn/rmtM/BaAAP4axOxLEb1wT94hSMJ6HTEsAko4/VtRAgguBRMVvSlpkhb0HzgIAB/+ph//7EmTDAfEEHuT/DOAMAAANIOAAAQRkfW+gsUiQAAA0gAAABBoRCUPB8FT3u5kzlrbQvjFYVEHo/+s74AQAB4Fg28RANHgfIXN/i4yCha//haeAVA1QOD/y8ISCcBcZP/pE9Y76CnyILP/7EGTDgfE/H154AzhEAAANIAAAAQSEfWOgJOkYAAA0gAAABEDSgtHJsfPDS3B+6Zp/kVw99WL8U2+G2hGvnSTZCNK+8AADMMB1AAAf/omAEHQKZv/mhURGCVm/9VI/yyoAAAUgCiAA//sSZL+AAUgfT9UVYAQAAA0goAABBSB1bBh2gAAAADSDAAAAAQceQCP//wyVP//+P8WAoozTHCQvm//LHb/yVf/+rChJgnSbf/WRAvSBsr5jfJqDmSHCwuKE9cEfBzvQ6A8x2AYQ6n0S//sQZLkB8Uwe3f8ZQAAAAA0g4AABBMh7eeClRZAAADSAAAAE+bY8VIn//SRYkC7+BwQVaOlu7pRGcQwpAeEfokldXh/Nf6R900Xw879RIVH94cemvVSB6DzNH//IbFkOE1b/6yYEKHf/+xJkswHxOx7d+G86pAAADSAAAAEE0H1roD1I0AAANIAAAAT/vfeyKCbtX/6w+BeXP//R61YQP1f/9YQQIMDf/eqooQ+GTOt/7AvAJEhfz7kid0KJOxXIp1NXfmdze1IFYFQ7GyOtX9D/+xBkroAA5xRPLR2ABAAADSCgAAEE8HtcGKiAAAAANIMAAAAdAAKaoAAldICR9hAac89nOEUDEGJFRksixFpYLudnQoj8Ds4ChHEgA45+brF5yDxOEZhVmuwPHpEiugB8B8xshj4xjP/7EmSuAAE0GFsGHeAAAAANIMAAAAN0e3m8I4AQAAA0g4AABI9PWIECGWQQyyZM+2FkyZMmTJk0wAARh4Y78ADo8FpJEADwuYJ3ucAwjRNwNgAOTN1AeGSBrzPQNFgFGwGjAAJX3dkwCv/7EGSvCfCeHuFoCCsUAAANIAAAAQHUT4mgFEqQAAA0gAAABFYDRsAgEAwA+mpmcAYeFwYcuBkgA8//k+QQih4dM84+uWAhEuJIK44d1BPq0kvrDsMGiwTcnYSUWutElUeZPnU//+VA//sSZL+AAHsTVQUJoAIAAA0goAABBPx5NBh2gAAAADSDAAAADgj/+wugqi6e/+gAADMYCCAAAbicJDgIJ/jK/+Lx5DQ41NP//JwAPwxw9UbMnc4eKHf0rZ/xSErkU///U0dFj0UAACIJ//sQZMYAATsa3AYd4AAAAA0gwAAAAexJcBwWgAAAADSDgAAEB3AAAf/1EDgUDCCAuWej+7Z49GqCHGrsr5575jfQ80hRf0i55oRExaIjDjAgk4WKF8gZFwuuIUIesqFZ1i2DmC1g3SD/+xJkzI/wbxPbAA9rEAAADSAAAAEBsEloAD2sQAAANIAAAAQVQ7ToW3GGWJExC48F9bKW3yLkOFKDgO//lstqd4D7m0hPQwWAzD4645UWHp1fUP4x/SOz74iiPrU4nLOLw49NfLA2OQD/+xBk4Q3wXhJXgAlTEgAADSAAAAEDiFEuIGGKgAAANIAAAARw3f/+YHDhvQAADsUaAccAABriwR1DQuBZ56Ht/iASYa///8mKB/kMAxRk/qkV4sb5AIVQULJB8b/qHgbxaN///yosPf/7EmTvCfDyGcdIDIMYAAANIAAAAQNoWK+AHYzgAAA0gAAABAAAKgkIOAAB/+cgfIBg6KQDUt/XYRgDmCI8w53//0cSR0eH5QAAAAAAAAEAALV9VWXAazMLy4VxlHDSArNMWz2VS7KrJP/7EGT0gAE0FqotBMAKAAANIKAAAQhwmUS5KgAAAAA0gwAAALe7xggBi1sQbRSUjwZHGqXDuHe/3//95/zd/6HPisT8w4j2hegj/LgrAjb3/xH6vewrf/uZls8cQZBRsf/948iU/skY//sSZOGAASMa2oYdoAAAAA0gwAAAAdRPahwWgAAAADSDgAAEn//VhhCiNG3/1JCGCcmz/xEqAAA8OAegAABRchKgnf/xgvHu/CnYDAARCgyijDr9++EiiwPkFgWzKx++535vQNmArHt///sQZOqF8NYe3egGUrQAAA0gAAABA1x9daAY51AAADSAAAAE/05gEtUAAbIyEYAHj0KLkQaB4GkXWjUda48XB8oc///+cNn44OQf/oph4tB0PQOn7jY865rj8iginxKKNSprGs1hpfH/+xJk8YABLB9VbRVABgAADSCgAAEHvJUkGNiAAAAANIMAAAAlAFnwGrAxGjSCyssIMiiCmEDYtUq3rAsnAFDgZ1SRtVfA0IEDhqQMeBEH/+F0wMelA1IcDJiwBhf/4dOOA8m5bzjabqf/+xBk4gABPhrahiHgAAAADSDAAAABKEt0PAUAGAAANIOAAASBsICSxhrTjE1GrX/P91Ml7YEjYNc0Ubn1grjf/h7P0P/+TYshhTVv/x/B+NWAAH7GAQgqNzOXM0sE9746x/hYlHf////7EmTrgfDhHt14BjogAAANIAAAAQPwfW+gmUbQAAA0gAAABOMqAA27FoQgAAG7RJAgkFR0mCgB15uhO1TtuJqFjJX///yRaIpiCjyjIqGQ+BkzI1/Y9twhANgLCQmWO//+UB09GAANZv/7EGTwAAEfH1jtFOAGAAANIKAAAQeceyd43AAAAAA0gwAAAAViKgUEBkSxKiV/VMEY8ABLBupsNoNB0qI34aFDHzkuN3f0/47yt3lbub/4R0wHp9NBk/wOfz4AAlGAADUimOpTR3yf//sSZOGAAUMd2YYp4AAAAA0gwAAAAhhNahwmgAAAADSDgAAERr6WL/i2ZLLozWRThEnkiAvh1KKNb8sgKhuCwLHQlOCErCUWFle1///0ijKOUuongSo7gMxYpdJMQU1FMy4xMDCqqqqq//sQZOcB8KcTYegDKpwAAA0gAAABBEh7deCxSVAAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkxBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/+xJk7Qnw8h9aYAk6TAAADSAAAAED6E1NVHWAEAAANIKAAASqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqTEFNRTMuMTAwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/+xBk8IACASZOBkqAAAAADSDAAAAEuGtqGHeAAAAANIMAAACqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqTEFNRTMuMTAwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv/7EmTfgfBqE1sHBaAAAAANIOAAAQMAe3egJKkQAAA0gAAABKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpMQU1FMy4xMDCqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv/7EGTvCfEMH1roC2nUAAANIAAAAQOkfVegJOqQAAA0gAAABKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpMQU1FMy4xMDCqqqqqqqqqqqqqqqqqqqqqqqqqqqqq//sSZPGJ8PwUShASYsAAAA0gAAABA3BS1IByrFAAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkxBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq//sQZPaJ8S8WpEgBeogAAA0gAAABA9hYh4Ax7HAAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkxBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/+xJk3Q/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAASqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqTEFNRTMuMTAwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/+xBk3Y/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAASqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqTEFNRTMuMTAwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv/7EmTdD/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpMQU1FMy4xMDCqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv/7EGTdj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpMQU1FMy4xMDCqqqqqqqqqqqqqqqqqqqqqqqqqqqqq//sSZN0P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkxBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq//sQZN2P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqgeX00V4gccAYQHZTR4kWiOBQP0LcBMEjNdRvD/PhQr/+xJk3Q/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAARc0F27fyVj01KzogUQCwH2MYWg09MSURh1l8PU0kCZbI3GuJoZ55Mj+yJbZ0UYnlQunxYJaEpPDuB2yGdFAR0p+0oX+sT/+xBk3Y/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAAQz4XggQSODQViURB3O6iEAAAwAL3YiMe8s+9bDwGAADBJk57CGwhk0aNGO8AcPzaAGR0cfJmIMD///zGHxHB2AQJCjcf/7EmTdD/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABLnpUwaEGUfEcH4PxIbPKFZ0w3XInsFWTC4l4H56bm0y00KERsci0RyjA6DULmZ4FRYKs7pb//6NnjPsSH8JoyJAJwbihf/7EGTdj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABMSRFERhnhYHvicPqgBJIRAEoAAB+ViKICbOEYoKCxC8PM2N/+P4LxdHiUKCH260UXfaXVz9MgAP///zS/4PAQXBgIFA//sSZN0P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAERgAUIF14ghLs1L5RTOiCAYr0FEHzpL9bLOzuJUCHaBo1ggADgBLl0c0c09qSt6+kqOJ3V//lrkL/SAkrqgAAIAyDIAAB//sQZN2P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEUuxbkujRCYLDpsS+aU1bq0AmkF6KHakv9aPZl/i4QYAD/p//8RZbOlVwSHIMZxmIohZgJZbrGi+v/vT0nGCC1jBNJHP/+xJk3Q/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAAQtq97aN1MFp//+RcG4SLmReHVTIBfksk//+SSX4NchVcICGNGIqEQJ1aP41R0ehgOhZsODVcyEYBmiXwXBFvL5sXlmXmj/+xBk/4nQAABpAAAACAAADSAAAAEJGIx1IbHuAKISUwwBMoZgaQuHGkTJd+aIppusmRlA6hLRYg2JKAAB/MgoBRn+CRLWZNMgh11u/66jmUQg4aiVxXrXd1TiojjpSJzvgmgACVBkN//7EGTogAFCEbfNGSACG4QWAaAcAETga1oYdoAAbhKoAwCgAAZ8RVFELKQg4VOfY3PrQ9WsMcAtE2Dpz5ImrLRRS+5jrZ1xcRqyAAAqGQegAAGsKzCVNQTsW6ujRQhWtXq2A+BIzwLI//sSZMcB0UgfVm8VoAYQBDly4AgABjB9NwDuisAnDZgEAInk1Rb1dJSZMMkvjxAD0kGQNprEVCWEAIFAO6NFI1dH73OAPEBxAMiTxir/rpMl8yIMbf/00DcuBtx4AMnoWu5stF3mOsf1//sQZK8J8TIe0mgYmqQLIAVyACIBBFR9Q0A9S1AAADSAAAAE2DIPg5FYIact7IeMmetXpDs8gAsPBPwUt+ApgUD8S8LaGtFtXBsACYHJDn/+I2OILgG4d//NzdV7lfVefEQSUA6QPLH/+xJkpwABLRZDBUNAAAAADSCgAAEE/HVQGHiACAAANIMAAAArRK6EvuA9gfF/8ELmcbHSofw+Dzz6wm+L/2rPgAARBgKQAAD/9HAVECAqKnmmsd/OCwncPxr7HbzTDvyCAAAsFAggAAH/+xBkooHxbR7X7xlgBAAADSDgAAEFZHtPoDJokAAANIAAAATDYQH1EYVmt/5QE4aZaf8vYMBRhqQAg/Adiof/gUIOf/rI1ayK4zhYmnT3/SUEGARFsato//9hQUQISo//uE0AieWIlf/7EmSYAfFEHtToD2q0AAANIAAAAQTMfUVALmiQAAA0gAAABGlmOgAMVB0NlEfOAbgRoJ2XhCL61o62bGHE4ZxyDl93pHSQNuVt0MB//ybGYF01/+pI+DOdT+lALmwfhjq//UHcFkeGof/7EGSTAAEVE8cFQyAAAAANIKAAAQUUlTYY1oAAAAA0gwAAAIgICmgbv/8aKIWVukoDS3P/QcNkCRPmuQqRSBlFJv/QfByEpRYAAkEAtBRP6xEZFwuoAVjMFE/VW6qehVpw1UxBTUUz//sSZI8AAUEa1gYh4AAAAA0gwAAABBB7YbwjgBAAADSDgAAELjEwAZAG5DmJmABQrS3JkwAVSFRrW/3iM8AJg0wBCDKF4AlClExBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq//sQZI0J8L8T2WgLOqQAAA0gAAABAkhNaaAUSlAAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkxBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/+xJkmY3wgxNPAA9TEgAADSAAAAEB/E8mNCUAAAAANIKAAASqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqTEFNRTMuMTAwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/+xBkq4ABNx3WrhWgAAAADSDAAAACBElYPBaAAAAANIOAAASqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqTEFNRTMuMTAwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv/7EmSyCfBrE9WIDRtAAAANIAAAAQFESW2ABKwQAAA0gAAABKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpMQU1FMy4xMDCqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv/7EGTIj/BrE1IADGsQAAANIAAAAQG0Sy4AMOxIAAA0gAAABKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpMQU1FMy4xMDCqqqqqqqqqqqqqqqqqqqqqqqqqqqqq//sSZN0J8FAKSsABEwwAAA0gAAABAfBMr6AJLOgAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkxBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq//sQZO6P8Q8TmKgAeEgAAA0gAAABAAABpAAAACAAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkxBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/+xJk3Q/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAASqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqTEFNRTMuMTAwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/+xBk3Y/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAASqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqTEFNRTMuMTAwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv/7EmTdD/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpMQU1FMy4xMDCqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqv/7EGTdj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpMQU1FMy4xMDCqqqqqqqqqqqqqqqqqqqqqqqqqqqqq//sSZN0P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkxBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq//sQZN2P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqgmIBICiTcRXr/m92zszPKUpRgJA8Ds1MAVGUly3Xjj/+xJk3Q/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAATkSZ21SLokErYexOH4bd93IcoX/f9/5UsI9iPCuKKVtbXeu9QNk9nkTd+jpLHgBnR9AIBAYKComDwAAAAAAA8OePTsPc//+xBk3Y/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAAT4OwA3884HOIaq5oaOGyg26EKPQZBAGIBvcFhCGfZTWC4UBIAFMEsNP9AkAti1GdAAA/QoWf//qYpQoVWBwWg6Pcy3c//7EmTdD/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABGW/9jOgBki00Y0sdX+5IbnVw701x1Vf5KwHDJhTef0jBAqpzRS6W3///kvtVVIYDNnknxWADwRF4rdvX7/mNhUhWvyhKP/7EGTdj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABOgctRoID4wLAsxSMQ8yI0waBr3I99KORSWC1wjwQP2OgGDsApAighQP//+KRfpfpbrJQSJBxsYvJGmi5g4MmKcLv5FI//sSZN0P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEeYIhEDKjHA6c3QMehAbp4unDs4Xzv/84Xv/+GrwGgAGhIGdyB9LIYeH+mz/////+ioFQs0YfKx4KBRWPqIM7fJ83xfB8//sQZN2P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEFfIxF8e4vSNIg9gbA/SWJcC6BNfwbsByBBaQv4AzAJAOC4P/E5ksS4nN5297/yQA7A1weL+zD1bEB1WDA/x/RjLxHoL/+xJk3Q/wAABpAAAACAAADSAAAAEAAAGkAAAAIAAANIAAAARAr980jy39bZJ//D3K//l0/A1AawMLpgDjKZC60QWJclyV5bLHAwUbgPDDMDGYeAkKhiksSslM55whw5xeLvnixhnSMzT/+xBk/4HwCgCAAYAACAAADSAAAAEJzHqVtMwACAAANIKAAAT5VAYfLZ68PFYLRUfOTXfv/cp73tUEIBMAPgycfTAIBBHIhJCec/Lv6iGs3urWeFql8QAIcQmTRZkzQYKC/etWMv/6CP/7EmT5gAHvHs9uNmAAAAANIMAAAAW0e1m8lYAwAAA0g4AABN/5aUxeyP/Fk2QBCHqPb///L30FC2Rs4CKmAsn2dlYD6KNxn6W9fpKf/UYMimOqmQCigtrF8xxV//8GbmWYlcr0Cv/////7EGTmD/GCHseAGxLgAAANIAAAAQWwexAAdqrAAAA0gAAABCwFKwnoFFpCwWAy4DLS04QVUaRVRVRXRWU4UaAf42FpUX+T05nwwBMH0BPAGAWECJl7jjImLMMUSM8tDmFE+CdBm0kf//sSZNkP8YAexQAbqjAAAA0gAAABBYha/hVNgAAAADSCgAAElYnC+VE1xnj4wIAAAH///9wfKiQp+JX//UIioIWChumnU34/z/yxx/U0QsMw2nNtLg9jf+4qDEB////qyv3UiJWLJTcZ//sQZM0AAUYdxQY2YAAAAA0gwAAABNRrRhiHgAAAADSDAAAAUPxhBa3EVJGSEVs9jaxiuq0/yVQP+UdUV88Nf7wk/qVh9JgzVgk1htUAAAQSC2AAAUaBgqGuZ2zD/BVLiDJJ2dwAAQD/+xJkxw/xnR7Gh0KgAAAADSDgAAEGFH0aAHJrSAAANIAAAAQYAH/J/0f/Jf70xMStH6rpWN/1CwTwuEtVAMgH//xw8ASJzFv/w9BpkpzpvBCBk+JmJPrcZQFESpoASMpfkENhZnppoRD/+xBktw/xSR7HABtqYAAADSAAAAEEqFkSAGmLQAAANIAAAARABsyKEX/8ipJDMDJnPzBZrfWvy8EyTEDiMA9NQsXNgtcRrLGuozDBwc7BumMwawuiH1bRI1uYaf/+ZxYpwXJKqP/4u//7EmSxgAFEFr0FT0AAAWAQAKYAAQX4dzwYuQAAOIAXCwAgAARROnmq6xwRQNzye//hDw6A+SyEUMTYEiP//rEFBIUt6GxUPMy/+PwXQLShYtOy3///BmgPegAAggAAP+n6gqCwEA/ypP/7EGSgCdD/E82HFwACDgPZAeAIAEOcUUOgBeoALg3VyAAI+E76xEPVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sSZJaJ8L8TVGgJUwQLAAVpAAIBAhxPMAA86ogAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQZJ8AAJITSS0JQAIAAA0goAABBRR5MhjZAAAAADSDAAAAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/+xJko4ABSBtQBjYAAAAADSDAAAACCE9CHCgAAAAANIOAAARVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/+xBkqQnwbxNOgAaLAAAADSAAAAEBmElCoAWsCAAANIAAAARVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7EmS9j/BdEsoACVMQAAANIAAAAQFMSOwAZm4AAAA0gAAABFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7EGTVC/BVAK3IARAMAAANIAAAAQEUApCACEAgAAA0gAAABFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sSZN0P8AAA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MDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7EGTsh/DPEzIAFuugAAANIAAAAQRcZO0DJMxAAAA0gAAABFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sSZPAB8d0dQik4YxQAAA0gAAABBIBtFyC+bEgAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQZOKJ8G4TTMgNC7gAAA0gAAABAyRM2ABWzAAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/+xBk8QvwyxK0gBWzAAAADSAAAAEESGyOoWGsUAAANIAAAARVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7EmTwD/EtFJxID8JQAAANIAAAAQAAAaQAAAAgAAA0gAAABFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7EGTdj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sSZN0P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQZN2P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU='
+
+// Global arrays
+let all_teams = Array()
+let fixtures = Array()
+
+// 0 - Reset
+function reset_all() {
+	if (confirm('Are you sure you wish to reset the league? All progress will be lost!')) {
+		all_teams.length = 0
+		fixtures.length = 0
+		table = document.querySelector('#teams table')
+		for (let i = 0; i = table.rows.length - 2; i++) {
+			table.deleteRow(1)
+		}
+		document.querySelector('#teams').style = 'display:flex'
+		document.querySelector('#standings').style = 'display:none'
+	}
+}
+
+// 1 - Initial setup
+function add_team() {
+	tname = document.querySelector("#tname")
+	tcolr = document.querySelector("#tcolr")
+	table = document.querySelector("#teams table")
+
+	// Get team colour
+	team_colour = tcolr.value == 'none' ? 'color:white' : `color:${tcolr.value}`
+
+	// Set team name
+	span1 = document.createElement('span')
+	span1.innerHTML = tname.value.toUpperCase()
+	span1.style = team_colour
+
+	// Set team colour
+	span2 = document.createElement('span')
+	span2.innerHTML = tcolr.value
+	span2.style = team_colour
+
+	// Starting values
+	var team = new Object()
+	team.name = tname.value.toUpperCase() // team name
+	team.clr = tcolr.value // bib colour
+	team.gp = 0 // games played
+	team.w = 0 // games won
+	team.d = 0 // games drawn
+	team.l = 0 // games lost
+	team.gf = 0 // goals for
+	team.ga = 0 // goals against
+	team.gd = 0 // goal difference
+	team.pts = 0 // points
+
+	// Add to table if name is unique
+	if (all_teams.find(t => {return t.name == team.name})) {
+		return alert('Choose a unique team name!')
+	}
+	row = table.insertRow(all_teams.length + 1)
+	row.insertCell().appendChild(span1)
+	row.insertCell().appendChild(span2)
+	all_teams.push(team)
+
+	// Clear for next use
+	tname.value = ''
+	tcolr.value = 'none'
+	tname.focus()
+}
+
+// 2 - Arrange teams in table
+function start(sort_teams = false) {
+	document.querySelector('#teams').style = 'display:none'
+	document.querySelector('#standings').style = 'display:flex'
+	table = document.querySelector('#standings table')
+	for (let i = 0; i = table.rows.length - 1; i++) {
+		table.deleteRow(-1)
+	}
+
+	if (sort_teams) sort();
+	alarm()
+
+	// Fill league table
+	for (const team of all_teams) {
+		row = table.insertRow(table.rows.length)
+		span = document.createElement('span')
+		span.innerHTML = team.name
+		span.style = team.clr == 'none' ? 'color:white' : `color:${team.clr}`
+		row.insertCell().appendChild(span)
+		const stats = [team.gp, team.w, team.d, team.l, team.gf, team.ga, team.gd, team.pts]
+		for (const stat of stats) {
+			row.insertCell().appendChild(document.createTextNode(stat))
+		}
+	}
+}
+
+// 3 - Setup for counting scores
+function play() {
+	team_names = all_teams.map(t => t.name)
+	window.fixtures = league(team_names)
+	next()
+}
+
+// 4 - (Re)create scoreboard
+function next() {
+	if (document.querySelector('#scoreboard')) {
+		document.querySelector('#scoreboard').remove()
+	}
+	match = window.fixtures.shift()
+	if (match) {
+		// Home team
+		// Name
+		home_t = document.createElement('span')
+		home_t.innerHTML = match[0]
+		// Score
+		home_s = document.createElement('input')
+		home_s.setAttribute('id', 'home_s')
+		home_s.setAttribute('type', 'number')
+		home_s.setAttribute('placeholder', 'score')
+		home_s.setAttribute('required', '')
+		home_s.style = 'width:60px'
+
+		// Away team
+		// Name
+		away_t = document.createElement('span')
+		away_t.innerHTML = match[1]
+		// Score
+		away_s = document.createElement('input')
+		away_s.setAttribute('id', 'away_s')
+		away_s.setAttribute('type', 'number')
+		away_s.setAttribute('placeholder', 'score')
+		away_s.setAttribute('required', '')
+		away_s.style = 'width:60px'
+
+		// Submit button
+		played = document.createElement('input')
+		played.setAttribute('type', 'submit')
+		played.setAttribute('value', 'Submit')
+
+		form = document.createElement('form')
+		form.setAttribute('id', 'scoreboard')
+		form.addEventListener('submit', score)
+		form.appendChild(home_t)
+		form.appendChild(home_s)
+		form.appendChild(away_t)
+		form.appendChild(away_s)
+		form.appendChild(played)
+		form.style = 'display:flex;flex-direction:row;justify-content:center;gap:8px;color:white'
+		document.querySelector('#play').innerHTML = ''
+		document.querySelector('#play').appendChild(form)
+	} else {
+		document.querySelector('#play').innerHTML = 'Game over :)'
+	}
+}
+
+// 5 - Update stats after match
+function score(e) {
+	e.preventDefault()
+	home_s = parseInt(document.querySelector('#home_s').value)
+	home_t = window.match[0]
+	away_s = parseInt(document.querySelector('#away_s').value)
+	away_t = window.match[1]
+	for (var team of all_teams) {
+		if (team.name == home_t) {
+			team.gp += 1
+			team.w += (home_s > away_s) ? 1 : 0
+			team.d += (home_s == away_s) ? 1 : 0
+			team.l += (home_s < away_s) ? 1 : 0
+			team.gf += home_s
+			team.ga += away_s
+			team.gd = team.gf - team.ga
+			team.pts = team.w*3 + team.d
+		} else if (team.name == away_t) {
+			team.gp += 1
+			team.w += (home_s < away_s) ? 1 : 0
+			team.d += (home_s == away_s) ? 1 : 0
+			team.l += (home_s > away_s) ? 1 : 0
+			team.gf += away_s
+			team.ga += home_s
+			team.gd = team.gf - team.ga
+			team.pts = team.w*3 + team.d
+		}
+	}
+	start(true)
+	next()
+}
+
+// Create league fixtures
+function league(players) {
+	if (players.length % 2 == 1) {
+		players.push(null)
+	}
+	const playerCount = players.length
+	const rounds = playerCount - 1
+	const half = playerCount / 2
+	var sched_1 = [], sched_2 = []
+	const playerIndexes = players.map((_, i) => i).slice(1)
+	for (let round = 0; round < rounds; round++) {
+		const newPlayerIndexes = [0].concat(playerIndexes)
+		const firstHalf = newPlayerIndexes.slice(0, half)
+		const secondHalf = newPlayerIndexes.slice(half, playerCount).reverse()
+		for (let i = 0; i < firstHalf.length; i++) {
+			if (players[firstHalf[i]] && players[secondHalf[i]]){
+				sched_1.push([ players[firstHalf[i]], players[secondHalf[i]] ])
+				sched_2.push([ players[secondHalf[i]], players[firstHalf[i]] ])
+			}
+		}
+		playerIndexes.push(playerIndexes.shift())
+	}
+	return sched_1.concat(sched_2)
+}
+
+// Arrange teams according to their scores
+function sort() {
+	all_teams.sort(function(a, b) {
+		if (a.w !== b.w) {
+			return a.w > b.w ? -1 : 1
+		} else if (a.pts !== b.pts) {
+			return a.pts > b.pts ? -1 : 1
+		} else if (a.gf !== b.gf) {
+			return a.gf > b.gf ? -1 : 1
+		} else if (a.ga !== b.ga) {
+			return a.ga < b.ga ? -1 : 1
+		} else if (a.gd !== b.gd) {
+			return a.gd > b.gd ? -1 : 1
+		} else {
+			return 0
+		}
+	})
+}
+
+// Add sorting capability by clicking on column headers
+// https://stackoverflow.com/a/49041392
+const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent
+const comparer = (idx, asc) => (a, b) => (
+		(v1, v2) => (v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2)) ? v1 - v2 : v1.toString().localeCompare(v2)
+	)(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx))
+
+window.onload = function() {
+	document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+		const table = th.closest('table')
+		Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+			.sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+			.forEach(tr => table.appendChild(tr))
+	})))
+}
+
+// Adapted from https://contactmentor.com/30-second-countdown-timer-js-sound
+function alarm(default_time = '07:00') {
+	const countContainer = document.querySelector('#countdown-number')
+	const startButton = document.querySelector('#tplay')
+	const pauseButton = document.querySelector('#tpause')
+	const resetButton = document.querySelector('#tstop')
+	var timeoutAudio = new Audio(radar)
+	timeoutAudio.loop = true
+	var timer
+	var minsec = default_time.split(':')
+	var remainingTime = parseInt(minsec[0]) * 60 + parseInt(minsec[1])
+	
+	const drawTime = () => {
+		var mins = Math.floor(remainingTime / 60)
+	    var secs = remainingTime - mins * 60
+	    countContainer.innerHTML = `${('0'+mins).slice(-2)}:${('0'+secs).slice(-2)}`
+	}
+	drawTime()
+
+	// start
+	const startTimer = () => {
+	  startButton.style = 'display:none'
+	  pauseButton.style = 'display:block'
+	  countContainer.setAttribute('contenteditable', false)
+	  if (remainingTime < 1 || remainingTime == NaN) {
+		remainingTime = parseInt(minsec[0]) * 60 + parseInt(minsec[1])
+	  }
+	  timer = setInterval(renderTime, 1000)
+      timeoutAudio.load()
+	}
+
+	// pause
+	const pauseTimer = () => {
+	  startButton.style = 'display:block'
+	  pauseButton.style = 'display:none'
+	  clearInterval(timer)
+      timeoutAudio.load()
+	}
+
+	// reset
+	const resetTimer = () => {
+	  startButton.style = 'display:block'
+	  pauseButton.style = 'display:none'
+	  clearInterval(timer)
+	  countContainer.setAttribute('contenteditable', true)
+	  remainingTime = parseInt(minsec[0]) * 60 + parseInt(minsec[1])
+	  drawTime()
+      timeoutAudio.load()
+	}
+
+	// Add onclick event to buttons
+	startButton.onclick = startTimer
+	resetButton.onclick = resetTimer
+	pauseButton.onclick = pauseTimer
+
+	// Count down and play sound
+	const renderTime = () => {
+	  remainingTime -= 1
+	  drawTime()
+	  if (remainingTime < 1) {
+		clearInterval(timer)
+		timeoutAudio.play()
+		return
+	  }
+	}
+}
+		</script>
+	</head>
+	<body>
+		<div class="main" id="teams">
+			<h1>Teams</h1>
+			<table>
+				<tr id="top">
+					<th>Team</th>
+					<th>Colour</th>
+					<th></th>
+				</tr>
+				<tr>
+					<td>
+						<input id="tname" placeholder="Team name" style="text-height:32" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" autofocus>
+					</td>
+					<td>
+						<select id="tcolr" placeholder="Bib colour">
+							<option value="none" style="background:black">none</option>
+							<option value="red" style="background:red">red</option>
+							<option value="orange" style="background:orange">orange</option>
+							<option value="yellow" style="background:yellow;color:#000">yellow</option>
+							<option value="green" style="background:green">green</option>
+							<option value="blue" style="background:blue">blue</option>
+						</select>
+					</td>
+					<td>
+						<button id="add" type="button" onclick="add_team()">Add</button>
+					</td>
+				</tr>
+			</table>
+			<div id="done" onclick="start();play()">Done</div>
+		</div>
+		<div class="main" id="standings" style="display:none">
+			<h1>League Standings</h1>
+			<table>
+				<tr id="top">
+					<th>Team</th>
+					<th>GP</th>
+					<th>W</th>
+					<th>D</th>
+					<th>L</th>
+					<th>GF</th>
+					<th>GA</th>
+					<th>GD</th>
+					<th>Pts</th>
+				</tr>
+			</table>
+			<div id="play"></div>
+			<aside>
+				<div id="countdown">
+					<div id="countdown-number" contenteditable="true" onfocusout="alarm(this.innerText)"></div>
+				</div>
+				<div class="action-list">
+					<button id="tpause" style="display:none">
+						&#x23F8;&#xFE0E;
+						<!--&#8545;-->
+					</button>
+					<button id="tplay">
+						&#x23F5;&#xFE0E;
+					</button>
+					<button id="tstop">
+						&#x23F9;&#xFE0E;
+					</button>
+				</div>
+			</aside>
+			<div id="reset" onclick="reset_all()">Reset League</div>
+		</div>
+	</body>
+</html>
