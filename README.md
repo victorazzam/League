@@ -12,15 +12,11 @@ This app has been used during my weekly ⚽ matches in university. People seem t
 
 ## Screenshots
 
-![Unable to display image. Check icons/ss1.png](icons/ss1.png)
-
-![Unable to display image. Check icons/ss2.png](icons/ss2.png)
-
-![Unable to display image. Check icons/ss3.png](icons/ss3.png)
-
-![Unable to display image. Check icons/ss4.png](icons/ss4.png)
-
-![Unable to display image. Check icons/ss5.png](icons/ss5.png)
+_                          |  _
+:-------------------------:|:-------------------------:
+![](icons/ss2.png)         |  ![](icons/ss3.png)
+![](icons/ss4.png)         |  ![](icons/ss5.png)
+![](icons/ss1.png)         |
 
 ## Future development
 
