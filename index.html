@@ -7,7 +7,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-title" content="League">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<title>League Standings | Football</title>
+		<title>League</title>
 		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 		<link rel="manifest" href="manifest.json">
 		<link rel="shortcut icon" href="icons/favicon.ico">
@@ -215,6 +215,7 @@ let radar = 'data:audio/mpeg;base64,SUQzBAAAAAAAPFRYWFgAAAAPAAADVFhYWABpc282bXA0
 // Global arrays
 let all_teams = Array()
 let fixtures = Array()
+let timeoutAudio = new Audio(radar)
 
 // 0 - Reset
 function reset_all() {
@@ -460,9 +461,8 @@ function alarm(default_time = '07:00') {
 	const startButton = document.querySelector('#tplay')
 	const pauseButton = document.querySelector('#tpause')
 	const resetButton = document.querySelector('#tstop')
-	var timeoutAudio = new Audio(radar)
 	timeoutAudio.loop = true
-	var timer
+	var timer;
 	var minsec = default_time.split(':')
 	var remainingTime = parseInt(minsec[0]) * 60 + parseInt(minsec[1])
 	
@@ -515,6 +515,7 @@ function alarm(default_time = '07:00') {
 	  drawTime()
 	  if (remainingTime < 1) {
 		clearInterval(timer)
+		timeoutAudio.src = radar
 		timeoutAudio.play()
 		return
 	  }
