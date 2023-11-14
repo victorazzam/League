@@ -7,7 +7,14 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-title" content="League">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<title>League</title>
+		<title>League - Football Fixtures</title>
+		<meta name="description" content="Football league fixtures generator and timer with sound." />
+		<meta property="og:title" content="League - Football Fixtures" />
+		<meta property="og:url" content="https://league.wftc.xyz" />
+		<meta property="og:description" content="Football league fixtures generator and timer with sound." />
+		<meta property="og:image" content="/icons/logo.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_GB" />
 		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 		<link rel="manifest" href="manifest.json">
 		<link rel="shortcut icon" href="icons/favicon.ico">
@@ -152,7 +159,10 @@ tr {
 	height: 60px;
 	font-size: 3em;
 	cursor: pointer;
-	text-align: center
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
 }
 
 #countdown {
@@ -476,7 +486,7 @@ function alarm(default_time = '07:00') {
 	// start
 	const startTimer = () => {
 	  startButton.style = 'display:none'
-	  pauseButton.style = 'display:block'
+	  pauseButton.style = 'display:inherit'
 	  countContainer.setAttribute('contenteditable', false)
 	  if (remainingTime < 1 || remainingTime == NaN) {
 		remainingTime = parseInt(minsec[0]) * 60 + parseInt(minsec[1])
@@ -487,7 +497,7 @@ function alarm(default_time = '07:00') {
 
 	// pause
 	const pauseTimer = () => {
-	  startButton.style = 'display:block'
+	  startButton.style = 'display:inherit'
 	  pauseButton.style = 'display:none'
 	  clearInterval(timer)
       timeoutAudio.load()
@@ -495,7 +505,7 @@ function alarm(default_time = '07:00') {
 
 	// reset
 	const resetTimer = () => {
-	  startButton.style = 'display:block'
+	  startButton.style = 'display:inherit'
 	  pauseButton.style = 'display:none'
 	  clearInterval(timer)
 	  countContainer.setAttribute('contenteditable', true)
@@ -575,14 +585,17 @@ function alarm(default_time = '07:00') {
 				</div>
 				<div class="action-list">
 					<button id="tpause" style="display:none">
-						&#x23F8;&#xFE0E;
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/></svg>
+						<!--&#x23F8;&#xFE0E;-->
 						<!--&#8545;-->
 					</button>
 					<button id="tplay">
-						&#x23F5;&#xFE0E;
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+						<!--&#x23F5;&#xFE0E;-->
 					</button>
 					<button id="tstop">
-						&#x23F9;&#xFE0E;
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+						<!--&#x23F9;&#xFE0E;-->
 					</button>
 				</div>
 			</aside>

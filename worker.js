@@ -1,7 +1,7 @@
 const CACHE_NAME = 'my-pwa-cache';
 const urlsToCache = [
-  '/league/index.html',
-  '/league/worker.js'
+  '/index.html',
+  '/worker.js'
 ];
 
 self.addEventListener("message", (event) => {
@@ -44,7 +44,7 @@ self.addEventListener('fetch', function(event) {
             return response;
           })
           .catch(function() {
-            return caches.match('/league/index.html');
+            return caches.match('/index.html');
           });
       })
   );

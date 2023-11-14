@@ -1,11 +1,11 @@
 {
-  "start_url": "https://play.wftc.xyz/league/",
+  "start_url": "https://league.wftc.xyz",
   "dir": "ltr",
   "lang": "en",
   "display": "standalone",
   "name": "League",
   "short_name": "League",
-  "description": "Football league fixtures generator and timer.",
+  "description": "Football league fixtures generator and timer with sound.",
   "orientation": "portrait-primary",
   "theme_color_backup": "#4aace6",
   "background_color": "#000000",
